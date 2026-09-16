@@ -1,7 +1,9 @@
-<h1 style="text-align: center;">Data Structures and Algorithm - Coin Row Problem</h1>
-<h5 style="text-align: center;">Algorithm Analysis for the Coin Row Problem</p>
+<div align="center">
+<h1>Data Structures and Algorithm - Coin Row Problem</h1>
+<h5>Algorithm Analysis for the Coin Row Problem</h5>
 
-<h6 style="text-align: center;"><a href="Google colab notebook link here" > [Cloud version] Google Colab Notebook</a></h6>
+<h6><a href="Google colab notebook link here" > [Cloud version] Google Colab Notebook</a></h6>
+</div>
 
 ---
 
@@ -9,7 +11,7 @@
 
 Given that a row of N coins with **positive values**:
 
-<p style="text-align: center;"> $C_1 , C_2, C_3, ..., C_n$</p>
+<p align="center"> $C_1 , C_2, C_3, ..., C_n$</p>
 
 The goal we need to achieve is to ensure that:
 <ul>
@@ -20,7 +22,7 @@ The goal we need to achieve is to ensure that:
 
 Throughout this repository (or report, take it as you will lol) we'll be messing with this set of numbers using a list:
 
-<p style="text-align: center;"> $[ 5 , 1 , 9 , 10 , 9 , 2]$</p>
+<p align="center"> $[ 5 , 1 , 9 , 10 , 9 , 2]$</p>
 
 This repo will also only utilize Python for the programming and analysis of the Space-Time Complexity.
 
