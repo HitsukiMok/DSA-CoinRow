@@ -73,6 +73,6 @@ def dynamicProgramming(coins):
 coin_list = [5,1,9,10,9,2]
 
 maxTotal, selected = dynamicProgramming(coin_list)
-print(f"Coin Row:       {coin_list}")
+print(f"Coin Row:       {coin_list} (Length n = {len(coin_list)})")
 print(f"Max Value:      Php {maxTotal}")
 print(f"Selected Coins: {selected}")
