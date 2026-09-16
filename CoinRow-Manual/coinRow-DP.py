@@ -29,50 +29,50 @@ def dynamicProgramming(coins):
         #Option 1: Take coin[i]
         #However you won't be able to pick coin[i-1]
         #So what we'll do is add the best score from 2 spots back (dp[i-2])
-        take_coin = coins[i] + dp[i - 2]
+        coinTake = coins[i] + dp[i - 2]
 
         #Option 2: Skip coin[i]
         #Gain 0 from coin i, best score will be carried over from dp[i-1]
-        skip_coin = dp[i-1]
+        coinSkip = dp[i-1]
 
         #Store on what coin has the higher value
-        dp[i] = max(take_coin, skip_coin)
+        dp[i] = max(coinTake, coinSkip)
 
     #-- [OPTIONAL] Step 4: Backtrack (to find out what coins won) --
     #Tracing backwards to see what choices the program made.
 
-    chosen_coins = []
+    coinsChosen = []
     i = n-1
 
     while i>= 0:
         if i == 0:
             #If the first coin was taken
-            chosen_coins.append(coins[0])
+            coinsChosen.append(coins[0])
         elif i == 1:
             #reached the second coin and check if which coin won
             if dp[1] == coins[1]:
-                chosen_coins.append(coins[1])
+                coinsChosen.append(coins[1])
             else:
-                chosen_coins.append(coins[0])
+                coinsChosen.append(coins[0])
             break
         elif dp[i] == coins[i] + dp[i - 2]:
             #if dp[i] matches the take_coin's formula then it is selected
-            chosen_coins.append(coins[i])
+            coinsChosen.append(coins[i])
             i -= 2 #jump to skip the adjacent element
         else:
             #dp[i] == dp[i-1], coin[i] was skipped.
             i -=1
 
-    chosen_coins.reverse()
+    coinsChosen.reverse()
 
-    return dp[-1], chosen_coins
+    return dp[-1], coinsChosen
 
 
 #Function in action
 
 coin_list = [5,1,9,10,9,2]
 
-max_total, selected = dynamicProgramming(coin_list)
+maxTotal, selected = dynamicProgramming(coin_list)
 print(f"Coin Row:       {coin_list}")
-print(f"Max Value:      Php {max_total}")
+print(f"Max Value:      Php {maxTotal}")
 print(f"Selected Coins: {selected}")
