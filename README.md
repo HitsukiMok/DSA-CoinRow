@@ -11,7 +11,7 @@
 
 Given that a row of N coins with **positive values**:
 
-<p align="center"> $ C_1 , C_2, C_3, ..., C_n$ </p>
+<p align="center"> $$ C_1 , C_2, C_3, ..., C_n$$ </p>
 
 The goal we need to achieve is to ensure that:
 <ul>
@@ -22,7 +22,7 @@ The goal we need to achieve is to ensure that:
 
 Throughout this repository (or report, take it as you will lol) we'll be messing with this set of numbers using a list:
 
-<p align="center"> $ [ 5 , 1 , 9 , 10 , 9 , 2] $ </p>
+<p align="center"> $$ [ 5 , 1 , 9 , 10 , 9 , 2] $$ </p>
 
 This repo will also only utilize Python for the programming and analysis of the Space-Time Complexity.
 
@@ -109,7 +109,7 @@ Brute force basically imagines the coin line into a binary decision tree. Starti
 
 Once execution branches reach the end of the line; which are the base cases, the returns basically bubbles back up the call stack. Every step, the function executes:
 
-<p align="center"> $ max(Total_{take}, Total_{skip})$ </p>
+<p align="center"> $$ max(Total_{take}, Total_{skip})$$ </p>
 
 Because it leaves zero possibilities unvisited, brute force technically IS guaranteed to find the maximum value.
 
@@ -135,7 +135,7 @@ Why?
 
 Well, if you look at the recurrence relation, it's basically the fibonacci sequence:
 
-<p align="center"> $ T(n) = T(n-1) + T(n-2)$ </p>
+<p align="center"> $$ T(n) = T(n-1) + T(n-2)$$ </p>
 
 So the growth rate is basically bounded by the Golden Ratio.
 
