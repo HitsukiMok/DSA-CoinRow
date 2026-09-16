@@ -151,6 +151,9 @@ Dynamic programming *(ill call it dp this point onward)* solves Coin Row by tran
 
 DP basically solves all the glaring problem we have with Brute Force while maintaining consistent speed akin to Greedy algorithm, as both DP and Greedy only needs 1 pass to find the maximum value.
 
+Look at the following graph:
+<img src="CoinRow-Manual\img\seperated profiles\dp_profile.png" alt="Dynamic Programming Algorithm's Space-Time complexity's chart">
+
 DP succeeds because of the following:
 * Optimal Substructure: Optimal choice for a row of length `i` directly depends on the optimal solutions to shorter sub-rows(`i-1` and `i - 2`)
 * Overlapping Subproblems: Both the *"take"* and *"skip"* recursive branches examine the same sub-arrays, instead of re-traversing them like Brute force. DP solves each sub-array once and stores them in the table dp.
